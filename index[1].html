@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verity Rankings</title>
+  <meta name="description" content="An unofficial community ranking board for the Verity universe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top"><span>V</span> VERITY <b>RANKINGS</b></a>
+    <nav>
+      <a href="#rankings">Rankings</a>
+      <a href="#stats">Stats</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="random-btn" id="randomBtn">RANDOM ↗</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><i></i> COMMUNITY POWER INDEX • 2026</div>
+        <h1>WHO<br><span>REIGNS?</span></h1>
+        <p>Ranking the faces, variants and nightmares of the Verity universe.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#rankings">ENTER THE BOARD <span>↓</span></a>
+          <button class="secondary" id="duelBtn">⚔ START A DUEL</button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top"><span>CURRENT #1</span><b>98.7</b></div>
+        <div class="big-avatar">V</div>
+        <div class="hero-card-name">VERITY</div>
+        <div class="meter"><span style="width:98.7%"></span></div>
+        <div class="hero-card-bottom"><span>OVERALL POWER</span><span>98.7 / 100</span></div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <span>VERITY</span><b>•</b><span>FALSITY</span><b>•</b><span>CRUELITY</span><b>•</b><span>LOVITY</span><b>•</b><span>COMMUNITY RANKINGS</span><b>•</b><span>VERITY</span>
+    </section>
+
+    <section class="rank-section" id="rankings">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">01 / THE BOARD</div>
+          <h2>ALL RANKINGS</h2>
+          <p class="muted">Current editorial scores. Click a character for the full breakdown.</p>
+        </div>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Find a character..." aria-label="Search characters">
+          <select id="sort" aria-label="Sort rankings">
+            <option value="rank">Default rank</option>
+            <option value="score">Overall</option>
+            <option value="aura">Aura</option>
+            <option value="lore">Lore</option>
+            <option value="threat">Threat</option>
+          </select>
+        </div>
+      </div>
+      <div class="ranking-list" id="rankingList"></div>
+    </section>
+
+    <section class="stats-section" id="stats">
+      <div class="section-label">02 / THE NUMBERS</div>
+      <h2>THE INDEX</h2>
+      <div class="stat-grid">
+        <div class="stat-card"><span>CHARACTERS TRACKED</span><strong id="count">10</strong></div>
+        <div class="stat-card"><span>HIGHEST AURA</span><strong id="topAura">—</strong></div>
+        <div class="stat-card"><span>HIGHEST LORE</span><strong id="topLore">—</strong></div>
+        <div class="stat-card"><span>AVERAGE SCORE</span><strong id="avgScore">—</strong></div>
+      </div>
+    </section>
+
+    <section class="duel-strip">
+      <div>
+        <div class="section-label">WHO TAKES IT?</div>
+        <h2>VERITY VS. EVERYONE.</h2>
+      </div>
+      <button class="primary" id="duelBtn2">RANDOM DUEL ⚡</button>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <div class="section-label">03 / ABOUT</div>
+        <h2>MADE BY<br>THE COMMUNITY.</h2>
+      </div>
+      <div class="about-copy">
+        <p>This is an unofficial fan ranking project. Scores are editorial/meme ratings, not official canon measurements.</p>
+        <p class="tiny">Characters and descriptions are included as a community-oriented reference and can be edited in <code>script.js</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="closeModal"></div>
+    <div class="modal-box">
+      <button class="close" id="closeX">×</button>
+      <div class="section-label">CHARACTER PROFILE</div>
+      <div class="modal-title-row"><h2 id="modalName">VERITY</h2><div class="modal-score"><span id="modalScore">98.7</span><small>/100</small></div></div>
+      <p id="modalDesc"></p>
+      <div class="profile-stats" id="modalStats"></div>
+    </div>
+  </div>
+
+  <footer><span>VERITY RANKINGS</span><span>UNOFFICIAL FAN PROJECT • 2026</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
