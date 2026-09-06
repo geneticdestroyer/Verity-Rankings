@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verity Rankings</title>
+  <meta name="description" content="The completely unofficial Verity character rankings.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">V</span> VERITY <b>RANKINGS</b></a>
+    <nav>
+      <a href="#rankings">Rankings</a>
+      <a href="#stats">Stats</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="random-btn" id="randomBtn">RANDOM</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">UNOFFICIAL • COMMUNITY PROJECT</div>
+      <h1>VERITY<br><span>RANKINGS</span></h1>
+      <p>The completely serious, definitely scientific ranking system for the Verity universe.</p>
+      <div class="hero-actions">
+        <a class="primary" href="#rankings">VIEW RANKINGS <span>↓</span></a>
+        <button class="secondary" id="duelBtn">START A DUEL</button>
+      </div>
+    </section>
+
+    <section class="spotlight">
+      <div class="spotlight-copy">
+        <div class="section-label">CURRENT #1</div>
+        <h2 id="spotlightName">VERITY</h2>
+        <p id="spotlightDesc">The benchmark. The original. The one everyone else has to measure against.</p>
+        <div class="score"><strong id="spotlightScore">98.7</strong><span>/ 100</span></div>
+      </div>
+      <div class="spotlight-orb"><div class="orb-inner">V</div></div>
+    </section>
+
+    <section class="rank-section" id="rankings">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">THE BOARD</div>
+          <h2>ALL RANKINGS</h2>
+        </div>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search..." aria-label="Search characters">
+          <select id="sort" aria-label="Sort rankings">
+            <option value="rank">Rank</option>
+            <option value="score">Overall score</option>
+            <option value="aura">Aura</option>
+            <option value="lore">Lore</option>
+            <option value="threat">Threat</option>
+          </select>
+        </div>
+      </div>
+      <div class="ranking-list" id="rankingList"></div>
+    </section>
+
+    <section class="stats-section" id="stats">
+      <div class="section-label">THE NUMBERS</div>
+      <h2>THE SCIENCE</h2>
+      <div class="stat-grid">
+        <div class="stat-card"><span>CHARACTERS</span><strong id="count">6</strong></div>
+        <div class="stat-card"><span>HIGHEST AURA</span><strong id="topAura">—</strong></div>
+        <div class="stat-card"><span>HIGHEST LORE</span><strong id="topLore">—</strong></div>
+        <div class="stat-card"><span>AVERAGE SCORE</span><strong id="avgScore">—</strong></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <div class="section-label">ABOUT</div>
+        <h2>COMPLETELY<br>UNOFFICIAL.</h2>
+      </div>
+      <p>This site is a fan-made ranking concept. Scores in this starter version are placeholder meme ratings so you can customize them. Replace the data in <code>script.js</code> with your own rankings, descriptions, and stats.</p>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="closeModal"></div>
+    <div class="modal-box">
+      <button class="close" id="closeX">×</button>
+      <div class="section-label">CHARACTER PROFILE</div>
+      <h2 id="modalName">VERITY</h2>
+      <div class="modal-score"><span id="modalScore">98.7</span> <small>OVERALL</small></div>
+      <p id="modalDesc"></p>
+      <div class="profile-stats" id="modalStats"></div>
+    </div>
+  </div>
+
+  <footer>VERITY RANKINGS • FAN PROJECT • 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
